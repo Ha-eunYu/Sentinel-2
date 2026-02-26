@@ -8,7 +8,7 @@ A reproducible pipeline to generate RGB composites and spectral indices (NDVI, N
 ⚠️ **This repository does NOT contain Sentinel-2 imagery.**
 All data must be downloaded directly from the Copernicus Data Space Ecosystem.
 
----
+
 
 ## Overview
 
@@ -24,7 +24,7 @@ The pipeline performs:
 5. SCL-based masking (cloud/shadow/snow removal)
 6. Export to GeoTIFF and PNG quicklooks
 
----
+
 
 ## Data source
 
@@ -34,7 +34,7 @@ The pipeline performs:
 This repository does not redistribute Sentinel-2 data.
 When publishing derived products, follow your journal/institution guidelines for Copernicus/Sentinel attribution.
 
----
+
 
 ## Repository structure
 
@@ -46,7 +46,7 @@ When publishing derived products, follow your journal/institution guidelines for
 ├── environment.yml
 └── downloads/  # (ignored) local data and outputs
 
----
+
 
 ## Required bands
 
@@ -60,7 +60,7 @@ When publishing derived products, follow your journal/institution guidelines for
 
 All outputs are standardized to **10 m** resolution.
 
----
+
 
 ## Notes
 
@@ -70,7 +70,8 @@ All outputs are standardized to **10 m** resolution.
 - Pixels flagged as cloud/shadow/snow/invalid in SCL are masked (set to NaN).
 - Indices are exported as float32 GeoTIFF (GTiff) and PNG quicklooks.
 
----
+
+
 ## Requirements  
   
 - Python: 3.10+  
@@ -81,7 +82,8 @@ All outputs are standardized to **10 m** resolution.
   
 All dependencies are pinned in `environment_*.yml` (single source of truth).
 
----
+
+
 ## Setup
 
 Create environment:
@@ -94,7 +96,7 @@ Create a `.env` file:
 CDSE_S3_ACCESS_KEY=your_key
 CDSE_S3_SECRET_KEY=your_secret
 
----
+
 
 ## Workflow
 
@@ -118,7 +120,7 @@ Outputs are written to:
 
 downloads/S2_INDICES/
 
----
+
 
 ## Intended use: SAR validation (optical reference)
 
@@ -131,7 +133,7 @@ These Sentinel-2 products are intended as *optical reference layers* to support 
 **Important:** spectral indices are not absolute ground truth for water.
 They can be biased by turbidity, algae blooms, sunglint, terrain shadows, mixed pixels, and adjacency effects.
 
----
+
 
 ## Citation
 
@@ -146,9 +148,9 @@ Follow your journal/institution guidelines for Copernicus/Sentinel attribution.
 - Title: Sentinel-2 Optical Reference Pipeline
 - Year: 2026
 - Version: v0.1.0
-- URL: https://github.com/Ha-eunYu/Sentinel-2
+- URL: https://github.com/Ha-eunYu/s2-optical-reference-pipeline
 
----
+
 
 ## License
 
