@@ -1,0 +1,12 @@
+name: s2api
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - requests
+      - pystac-client
+      - boto3
+      - tqdm
+      - python-dotenv

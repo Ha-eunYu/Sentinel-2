@@ -1,0 +1,21 @@
+name: s2viz
+# ⚠️ channel_priority: strict 반드시 포함. conda-forge 채널이 우선적으로 검색.
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+
+  # Core scientific
+  - numpy
+  - matplotlib
+
+  # Geo stack (ABI-safe via conda-forge)
+  - gdal
+  - rasterio
+  - proj
+  - pyproj
+  - libgdal-jp2openjpeg
+
+  # Optional but useful
+  - pillow
+  - scipy

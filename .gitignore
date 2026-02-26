@@ -1,0 +1,24 @@
+# data
+downloads/
+*.jp2
+*.tif
+*.png
+*.SAFE
+
+# env
+.env
+*.env
+env/
+venv/
+.envs/
+conda-meta/
+
+# python
+__pycache__/
+*.pyc
+
+# jupyter
+.ipynb_checkpoints/
+
+# logs
+*.log
