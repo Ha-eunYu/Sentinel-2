@@ -12,6 +12,7 @@ env/
 venv/
 .envs/
 conda-meta/
+envtest.py
 
 # python
 __pycache__/
