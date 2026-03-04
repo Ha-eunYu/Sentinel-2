@@ -30,8 +30,7 @@ This pipeline automates a typical **Sentinel-2 remote sensing workflow**:
    - NDVI (Normalized Difference Vegetation Index)
    - NDWI (McFeeters Water Index)
    - MNDWI (Modified NDWI)
-5. **SCL masking** (cloud, shadow, snow filtering)
-6. Export to **GeoTIFF (GTiff)** and **PNG quicklooks**
+5. Export to **GeoTIFF** and **PNG quicklooks**
 
 The workflow is designed for **geospatial analysis, satellite data processing, and remote sensing research**.
 
@@ -86,7 +85,7 @@ All outputs are standardized to **10 m** resolution.
 - Bilinear resampling is used for continuous reflectance bands (e.g., B11).
 - Nearest-neighbor resampling is used for categorical layers (SCL).
 - Pixels flagged as cloud/shadow/snow/invalid in SCL are masked (set to NaN).
-- Indices are exported as float32 GeoTIFF (GTiff) and PNG quicklooks.
+- Indices are exported as float32 GeoTIFF and PNG quicklooks.
 
 
 
@@ -140,16 +139,15 @@ downloads/S2_INDICES/
 
 
 
-## Example Output
+<!-- ## Example Output
 
-The pipeline generates several remote sensing products from Sentinel-2 imagery, including:
+Example RGB composite generated from Sentinel-2 imagery.
 
-- RGB composite imagery
-- NDVI (Normalized Difference Vegetation Index)
-- NDWI (Normalized Difference Water Index)
-- MNDWI (Modified NDWI)
+![RGB example](figures/rgb_example.png)
 
-Outputs are exported as GeoTIFF and PNG quicklook images for visualization and analysis.
+Example NDWI water index.
+
+![NDWI example](figures/ndwi_example.png) -->
 
 
 
