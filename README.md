@@ -2,37 +2,51 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 # Sentinel-2 Optical Reference Pipeline
+> A Sentinel-2 remote sensing pipeline for generating RGB composites and spectral indices from Copernicus Data Space imagery.
 
-A reproducible pipeline to generate RGB composites and spectral indices (NDVI, NDWI, MNDWI) from Sentinel-2 Level-2A imagery using Copernicus Data Space STAC search and S3 access.
+A Python pipeline for **remote sensing and satellite imagery processing** that generates RGB composites and spectral indices (NDVI, NDWI, MNDWI) from **Sentinel-2 Level-2A imagery** using the **Copernicus Data Space Ecosystem (STAC API + S3 access)**.
 
-⚠️ **This repository does NOT contain Sentinel-2 imagery.**
-All data must be downloaded directly from the Copernicus Data Space Ecosystem.
+This repository provides a **reproducible geospatial workflow** for downloading, processing, and exporting Sentinel-2 optical data for applications such as:
+
+- satellite remote sensing analysis  
+- SAR validation and comparison  
+- flood monitoring and water detection  
+- vegetation monitoring using NDVI  
+- optical reference generation for SAR studies  
+
+⚠️ **This repository does NOT contain Sentinel-2 imagery.**  
+All data must be downloaded directly from the **Copernicus Data Space Ecosystem**.
 
 
 
 ## Overview
 
-The pipeline performs:
+This pipeline automates a typical **Sentinel-2 remote sensing workflow**:
 
-1. STAC search with cloud filtering and a date window
-2. Download of required bands via S3
-3. RGB image generation (TCI and/or B02/B03/B04 composite)
-4. Index computation:
-   - NDVI
-   - NDWI (McFeeters)
-   - MNDWI
-5. SCL-based masking (cloud/shadow/snow removal)
-6. Export to GeoTIFF and PNG quicklooks
+1. **STAC search** with cloud filtering and date constraints  
+2. **Band download via S3 API**  
+3. **RGB composite generation** (TCI or B02/B03/B04)  
+4. **Spectral index computation**
+   - NDVI (Normalized Difference Vegetation Index)
+   - NDWI (McFeeters Water Index)
+   - MNDWI (Modified NDWI)
+5. **SCL masking** (cloud, shadow, snow filtering)
+6. Export to **GeoTIFF (GTiff)** and **PNG quicklooks**
+
+The workflow is designed for **geospatial analysis, satellite data processing, and remote sensing research**.
 
 
 
-## Data source
+## Data Source
 
 - **Sentinel-2 Level-2A (Surface Reflectance)**
 - Accessed via the **Copernicus Data Space Ecosystem**
+- Search performed via **STAC API**
+- Data download via **S3 protocol**
 
-This repository does not redistribute Sentinel-2 data.
-When publishing derived products, follow your journal/institution guidelines for Copernicus/Sentinel attribution.
+This repository **does not redistribute Sentinel-2 data**.
+
+When publishing derived products, follow the **Copernicus / Sentinel attribution guidelines** required by your journal or institution.
 
 
 
@@ -150,9 +164,28 @@ Follow your journal/institution guidelines for Copernicus/Sentinel attribution.
 - Version: v0.1.0
 - URL: https://github.com/Ha-eunYu/s2-optical-reference-pipeline
 
-
-
 ## License
 
 This project is licensed under the MIT License.
 See the LICENSE file for details.
+
+---
+
+## Keywords
+
+- Sentinel-2
+- remote sensing
+- satellite imagery
+- spectral indices
+- NDVI
+- NDWI
+- MNDWI
+- Copernicus Data Space Ecosystem
+- STAC API
+- geospatial analysis
+- Python
+- SAR validation
+- flood detection
+- water detection
+- optical reference
+- earth observation
