@@ -162,7 +162,7 @@ Follow your journal/institution guidelines for Copernicus/Sentinel attribution.
 - Title: Sentinel-2 Optical Reference Pipeline
 - Year: 2026
 - Version: v0.1.0
-- URL: https://github.com/Ha-eunYu/s2-optical-reference-pipeline
+- URL: https://github.com/Ha-eunYu/s2-optical-pipeline
 
 ## License
 
